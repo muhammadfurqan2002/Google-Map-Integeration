@@ -15,7 +15,7 @@ class _Map_1State extends State<Map_1> {
 
   static final CameraPosition _currentPosition = const CameraPosition(
     target: LatLng(32.1877, 74.1945),
-    zoom: 13,
+    zoom: 14,
   );
   @override
   Widget build(BuildContext context) {
@@ -23,6 +23,7 @@ class _Map_1State extends State<Map_1> {
       child: Scaffold(
         backgroundColor: Theme.of(context).primaryColorDark,
         body: GoogleMap(
+          mapType: MapType.normal,
           initialCameraPosition: _currentPosition,
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
